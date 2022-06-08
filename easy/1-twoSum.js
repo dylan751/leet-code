@@ -3,8 +3,8 @@
  * @param {number} target
  * @return {number[]}
  */
-function twoSum(nums: number[], target: number): number[] {
-  let res: number[] = [];
+var twoSum = function (nums, target) {
+  let res = [];
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] == target) {
@@ -15,7 +15,7 @@ function twoSum(nums: number[], target: number): number[] {
   }
   console.log(res);
   return res;
-}
+};
 
 /* Test cases */
 let nums = [3, 3];

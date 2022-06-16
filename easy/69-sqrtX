@@ -1,0 +1,23 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function (x) {
+  if (x > 0 && x <= 3) {
+    console.log(1);
+    return 1;
+  }
+  for (let i = 0; i <= Math.ceil(x / 2); i++) {
+    if (i * i > x) {
+      console.log(i - 1);
+      return i - 1;
+    } else if (i * i == x) {
+      console.log(i);
+      return i;
+    }
+  }
+};
+
+// Test cases
+let x = 5;
+mySqrt(x);

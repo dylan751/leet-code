@@ -2,6 +2,7 @@
  * @param {number} x
  * @return {number}
  */
+// Method 1
 var mySqrt = function (x) {
   if (x > 0 && x <= 3) {
     console.log(1);
@@ -18,6 +19,34 @@ var mySqrt = function (x) {
   }
 };
 
+// ----------------------------------------------------------------------------------------
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+// Method 2
+var mySqrt = function (x) {
+  //if x is 0 or x is 1
+  if (x <= 1) return x;
+
+  //we will traverse till half of the value that sqrt is surely present in that range
+  let start = 1,
+    end = x / 2;
+  let ans = 0;
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+    if (mid * mid == x) return mid;
+    else if (mid * mid < x) {
+      //for the case if perfect square root doesn't exist
+      ans = Math.ceil(mid);
+      start = mid + 1;
+    } else end = mid - 1;
+  }
+  console.log(ans);
+  return ans;
+};
+
 // Test cases
-let x = 5;
+let x = 8;
 mySqrt(x);

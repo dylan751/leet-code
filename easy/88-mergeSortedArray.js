@@ -6,12 +6,11 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function (nums1, m, nums2, n) {
-  let i = nums1.length - 1;
-
   // Push every nums2's element into the back of nums1
-  for (let val of nums2) {
-    nums1[i] = val;
-    i--;
+  let j = 0;
+  for (let i = m; i < m+n; i++) {
+    nums1[i] = nums2[j];
+    j++;
   }
 
   // Sort the array
@@ -22,8 +21,8 @@ var merge = function (nums1, m, nums2, n) {
 };
 
 // Test cases 1
-let nums1 = [1, 2, 3, 0, 0, 0];
-let m = 3;
-let nums2 = [2, 5, 6];
-let n = 3;
+let nums1 = [0];
+let m = 0;
+let nums2 = [1];
+let n = 1;
 merge(nums1, m, nums2, n);

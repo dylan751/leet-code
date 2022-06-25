@@ -10,13 +10,9 @@ var isValidValue = function (row, column, board) {
   let value = board[row][column]; // Current value
   for (let i = 0; i < BOARD_SIZE; i++) {
     // Check is_valid row
-    if (i != column && board[row][i] == value) {
-      return false;
-    }
+    if (i != column && board[row][i] == value) return false;
     // Check is_valid column
-    if (i != row && board[i][column] == value) {
-      return false;
-    }
+    if (i != row && board[i][column] == value) return false;
     // Check is_valid surrounding
     if (
       (3 * Math.floor(row / 3) + Math.floor(i / 3) != row ||
@@ -24,9 +20,8 @@ var isValidValue = function (row, column, board) {
       board[3 * Math.floor(row / 3) + Math.floor(i / 3)][
         3 * Math.floor(column / 3) + (i % 3)
       ] == value
-    ) {
+    )
       return false;
-    }
   }
   return true;
 };

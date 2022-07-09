@@ -3,7 +3,26 @@
  * @return {number}
  */
 
+// Same method as the code below (but cleaner code)
 var maxProfit = function (prices) {
+  let buy = prices[0];
+  let maxProfit = 0;
+  for (let i = 0; i < prices.length; i++) {
+    // If tomorrow can buy at lower cost -> Buy at lower cost
+    if (prices[i] < buy) {
+      buy = prices[i];
+    } else {
+      // If buy < sell -> Keep comparing the sell price of days after
+      maxProfit = Math.max(prices[i] - buy, maxProfit);
+    }
+  }
+  
+  console.log(maxProfit);
+  return maxProfit;
+};
+
+// -------------------- MYSELF CODE --------------------
+var maxProfit2 = function (prices) {
   let left = 0; // Buy stock
   let right = 1; // Sell stock
   let maxProfit = 0;
@@ -29,7 +48,7 @@ var maxProfit = function (prices) {
 };
 
 // Test cases
-let prices = [7,1,5,3,6,4];
+let prices = [7, 1, 5, 3, 6, 4];
 maxProfit(prices);
 
 // // Right Solution (but TIME LIMIT EXCEEDED)

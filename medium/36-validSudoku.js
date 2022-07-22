@@ -5,6 +5,49 @@
 
 const BOARD_SIZE = 9;
 
+// -------------------------------------------------------- Method 2 --------------------------------------------------------
+// Method 2: Using hash set
+function isValidSudoku(board) {
+  const rows = {};
+  const cols = {};
+  const squares = {};
+
+  for (let r = 0; r < 9; r++) {
+    for (let c = 0; c < 9; c++) {
+      const num = board[r][c];
+
+      if (num === ".") {
+        continue;
+      }
+
+      const grid = `${Math.floor(r / 3)}${Math.floor(c / 3)}`;
+
+      if (!cols[c]) {
+        cols[c] = new Set();
+      }
+      if (!rows[r]) {
+        rows[r] = new Set();
+      }
+      if (!squares[grid]) {
+        squares[grid] = new Set();
+      }
+
+      if (rows[r].has(num) || cols[c].has(num) || squares[grid].has(num)) {
+        console.log("False");
+        return false;
+      }
+
+      cols[c].add(num);
+      rows[r].add(num);
+      squares[grid].add(num);
+    }
+  }
+
+  console.log("True");
+  return true;
+}
+
+// -------------------------------------------------------- Method 2 --------------------------------------------------------
 // Check if the board[i][j]'s value is valid or not
 var isValidValue = function (row, column, board) {
   let value = board[row][column]; // Current value
@@ -13,7 +56,7 @@ var isValidValue = function (row, column, board) {
     if (i != column && board[row][i] == value) return false;
     // Check is_valid column
     if (i != row && board[i][column] == value) return false;
-    // Check is_valid surrounding
+    // Check is_valid grid (surrounding)
     if (
       (3 * Math.floor(row / 3) + Math.floor(i / 3) != row ||
         3 * Math.floor(column / 3) + (i % 3) != column) &&
@@ -26,7 +69,7 @@ var isValidValue = function (row, column, board) {
   return true;
 };
 
-var isValidSudoku = function (board) {
+var isValidSudoku2 = function (board) {
   for (let i = 0; i < BOARD_SIZE; i++) {
     for (j = 0; j < BOARD_SIZE; j++) {
       if (board[i][j] != "." && isValidValue(i, j, board) == false) {

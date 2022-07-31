@@ -15,7 +15,6 @@ var singleNumber = function (nums) {
         nums[j + 1] = temp;
       }
     }
-    
   }
 
   // Check 2 numbers beside each other is duplicate

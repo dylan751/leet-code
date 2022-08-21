@@ -12,7 +12,7 @@ var findMin = function (nums) {
     if (nums[middle] < nums[left]) {
       // Middle is in the right portion -> Min value must be in the middle or in the left of middle
       // Go left
-      right = middle - 1;
+      left += 1;
     } else {
       if (nums[middle] > nums[right]) {
         // Middle is in the right portion -> Go right
@@ -25,6 +25,21 @@ var findMin = function (nums) {
     }
   }
 };
+
+// Solution 2:
+var findMin2 = function (nums) {
+  let left = 0, right = nums.length - 1;
+  while (nums[left] > nums[right]) {
+      let middle  = Math.floor((left + right) / 2);
+      if (nums[middle] < nums[right]) {
+          right = middle;
+      } else {
+          left = middle + 1;
+      }
+  }
+          
+  return nums[left];
+}
 
 // Test cases
 let nums = [4, 5, 6, 7, 0, 1, 2];

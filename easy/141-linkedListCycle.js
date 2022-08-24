@@ -22,12 +22,14 @@
 //  if the fast pointer catch up with slow pointer, then it's a circular linked list
 //  if the fast pointer get to the end, then it's not a circular linked list
 
-var hasCycle = function (head) {
+const hasCycle = (head) => {
+  let slow = head;
   let fast = head;
   while (fast && fast.next) {
-    head = head.next;
+    slow = slow.next;
     fast = fast.next.next;
-    if (head === fast) return true;
+    if (slow === fast) return true;
   }
   return false;
 };
+

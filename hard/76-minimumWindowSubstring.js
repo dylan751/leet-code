@@ -3,6 +3,7 @@
  * @param {string} t
  * @return {string}
  */
+
 var minWindow = function (s, t) {
   let missing = t.length;
   const need = {};

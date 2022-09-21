@@ -3,6 +3,7 @@
  * @param {number[][]} prerequisites
  * @return {boolean}
  */
+
 var canFinish = function (numCourses, prerequisites) {
   //create 2D array
   let graph = Array.from(new Array(numCourses), () => []);

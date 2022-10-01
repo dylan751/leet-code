@@ -42,7 +42,6 @@ var calculateHeight = function (root) {
   if (root === null) {
     return 0;
   }
-
   let leftSubtreeHeight = 0;
   let rightSubtreeHeight = 0;
 

@@ -10,6 +10,7 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
+
 var isBalanced = function (root) {
   let leftHeight = 0;
   let rightHeight = 0;

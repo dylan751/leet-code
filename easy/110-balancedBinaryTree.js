@@ -39,6 +39,7 @@ var isBalanced = function (root) {
   return balanced;
 };
 
+
 var calculateHeight = function (root) {
   if (root === null) {
     return 0;

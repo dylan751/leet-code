@@ -10,7 +10,6 @@
  * @param {TreeNode} root
  * @return {number}
  */
-
 var diameterOfBinaryTree = function (root) {
   let resultSum = Number.MIN_SAFE_INTEGER;
 

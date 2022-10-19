@@ -5,7 +5,6 @@
  */
 
 let idiv = (d, n) => Math.floor(d / n);
-
 var convert = function (s, numRows) {
   if (numRows == 1) return s;
   let res = [];

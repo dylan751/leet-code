@@ -3,6 +3,7 @@
  * @param {number} numRows
  * @return {string}
  */
+
 let idiv = (d, n) => Math.floor(d / n);
 
 var convert = function (s, numRows) {

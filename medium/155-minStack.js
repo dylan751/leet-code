@@ -9,7 +9,6 @@ var MinStack = function () {
  * @param {number} val
  * @return {void}
  */
-
 MinStack.prototype.push = function (val) {
   let min =
     this.stack.length === 0 ? val : this.stack[this.stack.length - 1].min;

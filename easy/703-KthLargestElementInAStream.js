@@ -32,7 +32,6 @@ function searchKthLargest(root, k) {
   if (k === greaterThanRoot + 1) {
     return root.val;
   }
-
   if (k <= greaterThanRoot) {
     return searchKthLargest(root.right, k);
   }

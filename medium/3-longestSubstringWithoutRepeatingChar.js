@@ -5,19 +5,19 @@ var lengthOfLongestSubstring = function (str) {
   let max = 0;
 
   for (let i = 0; i < str.length; i++) {
-      let rightChar = str[i];
+    let rightChar = str[i];
 
-      if (!(rightChar in hash)) hash[rightChar] = 0;
-      hash[rightChar] += 1;
+    if (!(rightChar in hash)) hash[rightChar] = 0;
+    hash[rightChar] += 1;
 
-      while (hash[rightChar] > 1) {
-          let leftChar = str[start];
-          start += 1;
+    while (hash[rightChar] > 1) {
+      let leftChar = str[start];
+      start += 1;
 
-          if (leftChar in hash) hash[leftChar] -= 1;
-          if (hash[leftChar] === 0) delete hash[leftChar];
-      }
-      max = Math.max(max, i - start + 1);
+      if (leftChar in hash) hash[leftChar] -= 1;
+      if (hash[leftChar] === 0) delete hash[leftChar];
+    }
+    max = Math.max(max, i - start + 1);
   }
 
   console.log(max);
@@ -35,8 +35,8 @@ function lengthOfLongestSubstring2(s) {
       }
       // Xoá khỏi mảng từ ký tự đầu mảng đến ký tự trùng (bao gồm cả ký tự trùng)
       let remove_index = curr_sub_tring.indexOf(s[i]);
-      for(let j = 0; j <= remove_index; j++) {
-          curr_sub_tring.shift();
+      for (let j = 0; j <= remove_index; j++) {
+        curr_sub_tring.shift();
       }
     }
     curr_sub_tring.push(s[i]);
@@ -49,5 +49,5 @@ function lengthOfLongestSubstring2(s) {
 }
 
 // --- Test cases ---
-let string = "aksdjk";
+let string = 'aksdjk';
 lengthOfLongestSubstring(string); // Expected output: 5

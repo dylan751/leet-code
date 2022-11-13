@@ -4,9 +4,9 @@
  */
 var myAtoi = function (s) {
   s = s.trim();
-  let s_num = "";
+  let s_num = '';
   for (let i = 0; i < s.length; i++) {
-    if ((isNaN(Number(s[i])) && i !== 0) || s[i] === " ") break;
+    if ((isNaN(Number(s[i])) && i !== 0) || s[i] === ' ') break;
     s_num += s[i];
   }
   let num = Number(s_num);

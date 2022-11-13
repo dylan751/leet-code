@@ -27,11 +27,11 @@ function groupAnagrams(words) {
 function hashWord(word) {
   const count = new Array(26).fill(0); // Array contains the number of each characters of 'word'
   for (const ch of word) {
-    count[ch.charCodeAt(0) - "a".charCodeAt(0)] += 1;
+    count[ch.charCodeAt(0) - 'a'.charCodeAt(0)] += 1;
   }
   return count.toString();
 }
 
 // Test cases
-let strs = ["eat", "tan", "tea", "ate", "nat", "bat"];
+let strs = ['eat', 'tan', 'tea', 'ate', 'nat', 'bat'];
 groupAnagrams(strs);

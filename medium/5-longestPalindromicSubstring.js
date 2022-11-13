@@ -43,5 +43,5 @@ var expandAroundCenter = function (s, L, R) {
   return R - L + 1; //return length
 };
 
-let s = "sdhsdadbhsa";
+let s = 'sdhsdadbhsa';
 longestPalindrome(s);

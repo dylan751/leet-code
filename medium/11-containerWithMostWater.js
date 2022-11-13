@@ -15,10 +15,10 @@ var maxArea = function (height) {
     newMaxArea = (right - left) * Math.min(height[left], height[right]);
     maxArea = maxArea > newMaxArea ? maxArea : newMaxArea;
 
-    if(height[left] <= height[right]) {
-        left++;
+    if (height[left] <= height[right]) {
+      left++;
     } else {
-        right--;
+      right--;
     }
   }
 

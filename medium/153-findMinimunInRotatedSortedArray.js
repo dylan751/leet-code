@@ -28,18 +28,19 @@ var findMin = function (nums) {
 
 // Solution 2:
 var findMin2 = function (nums) {
-  let left = 0, right = nums.length - 1;
+  let left = 0,
+    right = nums.length - 1;
   while (nums[left] > nums[right]) {
-      let middle  = Math.floor((left + right) / 2);
-      if (nums[middle] < nums[right]) {
-          right = middle;
-      } else {
-          left = middle + 1;
-      }
+    let middle = Math.floor((left + right) / 2);
+    if (nums[middle] < nums[right]) {
+      right = middle;
+    } else {
+      left = middle + 1;
+    }
   }
-          
+
   return nums[left];
-}
+};
 
 // Test cases
 let nums = [4, 5, 6, 7, 0, 1, 2];

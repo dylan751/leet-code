@@ -37,6 +37,6 @@ const characterReplacement = function (str, maxFlipCount) {
   return str.length - left;
 };
 
-let s = "ABAB";
+let s = 'ABAB';
 let k = 2;
 characterReplacement(s, k); // Expected output: 4

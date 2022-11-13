@@ -12,7 +12,7 @@ var searchRange = function (nums, target) {
   let right = nums.length - 1;
 
   // Search from both ends
-  while ((left <= right) && (foundLeft == 0 || foundRight == 0)) {
+  while (left <= right && (foundLeft == 0 || foundRight == 0)) {
     if (nums[left] == target && foundLeft == 0) {
       res.unshift(left);
       foundLeft = 1;

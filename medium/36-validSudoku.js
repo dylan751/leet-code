@@ -16,7 +16,7 @@ function isValidSudoku(board) {
     for (let c = 0; c < 9; c++) {
       const num = board[r][c];
 
-      if (num === ".") {
+      if (num === '.') {
         continue;
       }
 
@@ -33,7 +33,7 @@ function isValidSudoku(board) {
       }
 
       if (rows[r].has(num) || cols[c].has(num) || squares[grid].has(num)) {
-        console.log("False");
+        console.log('False');
         return false;
       }
 
@@ -43,7 +43,7 @@ function isValidSudoku(board) {
     }
   }
 
-  console.log("True");
+  console.log('True');
   return true;
 }
 
@@ -72,26 +72,26 @@ var isValidValue = function (row, column, board) {
 var isValidSudoku2 = function (board) {
   for (let i = 0; i < BOARD_SIZE; i++) {
     for (j = 0; j < BOARD_SIZE; j++) {
-      if (board[i][j] != "." && isValidValue(i, j, board) == false) {
-        console.log("False");
+      if (board[i][j] != '.' && isValidValue(i, j, board) == false) {
+        console.log('False');
         return false;
       }
     }
   }
-  console.log("True");
+  console.log('True');
   return true;
 };
 
 let board = [
-  ["5", "3", ".", ".", "7", ".", ".", ".", "."],
-  ["6", ".", ".", "1", "9", "5", ".", ".", "."],
-  [".", "9", "8", ".", ".", ".", ".", "6", "."],
-  ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
-  ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
-  ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
-  [".", "6", ".", ".", ".", ".", "2", "8", "."],
-  [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-  [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+  ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+  ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+  ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+  ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+  ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+  ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+  ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+  ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+  ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
 ];
 
 isValidSudoku(board);

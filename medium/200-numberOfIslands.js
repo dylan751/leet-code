@@ -15,7 +15,7 @@ var numIslands = function (grid) {
     width = grid[0].length;
   for (let row = 0; row < height; row++) {
     for (let col = 0; col < width; col++) {
-      if (grid[row][col] == "1") {
+      if (grid[row][col] == '1') {
         // there is no chance '0' is part of an island
         traverse(row, col); // once this finishes, we've visited all lands of one island
         count++;
@@ -32,11 +32,11 @@ var numIslands = function (grid) {
       row >= height ||
       col < 0 ||
       col >= width ||
-      grid[row][col] == "0"
+      grid[row][col] == '0'
     ) {
       return;
     }
-    grid[row][col] = "0"; // turn land to water since we already visited it
+    grid[row][col] = '0'; // turn land to water since we already visited it
     for (let dir of DIRECTIONS) {
       traverse(row + dir[0], col + dir[1]);
     }

@@ -13,7 +13,7 @@ var topKFrequent = function (nums, k) {
     if (!count.has(num)) count.set(num, 1);
     else count.set(num, count.get(num) + 1);
   }
-  console.log("Map:", count);
+  console.log('Map:', count);
 
   // Poppulate the bucket with numbers in frequency
   // as the index of the bucket
@@ -23,7 +23,7 @@ var topKFrequent = function (nums, k) {
     }
     bucket[value].push(key);
   }
-  console.log("Bucket:", bucket);
+  console.log('Bucket:', bucket);
 
   for (let i = bucket.length - 1; i >= 0; i--) {
     if (Array.isArray(bucket[i])) {
@@ -31,7 +31,7 @@ var topKFrequent = function (nums, k) {
         res.push(n);
         if (res.length === k) {
           // Get k elements
-          console.log("Res:", res);
+          console.log('Res:', res);
           return res;
         }
       }

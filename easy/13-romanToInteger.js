@@ -7,49 +7,49 @@ var romanToInt = function (s) {
 
   for (let i = 0; i < s.length; i++) {
     switch (s[i]) {
-      case "I":
-        if (s[i + 1] == "V") {
+      case 'I':
+        if (s[i + 1] == 'V') {
           i++;
           res += 4;
-        } else if (s[i + 1] == "X") {
+        } else if (s[i + 1] == 'X') {
           i++;
           res += 9;
         } else {
           res += 1;
         }
         break;
-      case "V":
+      case 'V':
         res += 5;
         break;
-      case "X":
-        if (s[i + 1] == "L") {
+      case 'X':
+        if (s[i + 1] == 'L') {
           i++;
           res += 40;
-        } else if (s[i + 1] == "C") {
+        } else if (s[i + 1] == 'C') {
           i++;
           res += 90;
         } else {
           res += 10;
         }
         break;
-      case "L":
+      case 'L':
         res += 50;
         break;
-      case "C":
-        if (s[i + 1] == "D") {
+      case 'C':
+        if (s[i + 1] == 'D') {
           i++;
           res += 400;
-        } else if (s[i + 1] == "M") {
+        } else if (s[i + 1] == 'M') {
           i++;
           res += 900;
         } else {
           res += 100;
         }
         break;
-      case "D":
+      case 'D':
         res += 500;
         break;
-      case "M":
+      case 'M':
         res += 1000;
         break;
     }
@@ -59,5 +59,5 @@ var romanToInt = function (s) {
 };
 
 // Test cases
-let s = "MCMXCIV";
+let s = 'MCMXCIV';
 romanToInt(s);

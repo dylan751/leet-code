@@ -6,7 +6,7 @@ var isPalindrome = function (x) {
   let num_arr = [];
 
   // -121 -> Return false (Negative number always return false since it don't symmetric)
-  if(x < 0) {
+  if (x < 0) {
     return false;
   }
 

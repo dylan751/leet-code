@@ -6,7 +6,7 @@
 var minWindow = function (s, t) {
   let missing = t.length;
   const need = {};
-  t.split("").forEach((c) => (need[c] = (need[c] || 0) + 1));
+  t.split('').forEach((c) => (need[c] = (need[c] || 0) + 1));
   let i = 0;
   let I = 0;
   let J = 0;

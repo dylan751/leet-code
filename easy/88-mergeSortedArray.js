@@ -8,7 +8,7 @@
 var merge = function (nums1, m, nums2, n) {
   // Push every nums2's element into the back of nums1
   let j = 0;
-  for (let i = m; i < m+n; i++) {
+  for (let i = m; i < m + n; i++) {
     nums1[i] = nums2[j];
     j++;
   }

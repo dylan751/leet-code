@@ -10,13 +10,13 @@ var isValid = function (s) {
   let stack = [];
   // Nhét các ngoặc vào stack
   for (let i = 0; i < s.length; i++) {
-    if (s[i] == "(" || s[i] == "[" || s[i] == "{") {
+    if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
       stack.push(s[i]);
-    } else if (s[i] == ")" && !(stack.length == 0) && stack.pop() == "(") {
+    } else if (s[i] == ')' && !(stack.length == 0) && stack.pop() == '(') {
       continue;
-    } else if (s[i] == "]" && !(stack.length == 0) && stack.pop() == "[") {
+    } else if (s[i] == ']' && !(stack.length == 0) && stack.pop() == '[') {
       continue;
-    } else if (s[i] == "}" && !(stack.length == 0) && stack.pop() == "{") {
+    } else if (s[i] == '}' && !(stack.length == 0) && stack.pop() == '{') {
       continue;
     } else {
       return false;
@@ -30,5 +30,5 @@ var isValid = function (s) {
 };
 
 // Test cases
-let s = "(())[]{}";
+let s = '(())[]{}';
 isValid(s);

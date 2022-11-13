@@ -29,6 +29,6 @@ var isAnagram = function (s, t) {
 };
 
 // Test cases
-let s = "anagram";
-let t = "nagarams";
+let s = 'anagram';
+let t = 'nagarams';
 isAnagram(s, t);

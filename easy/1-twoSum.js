@@ -9,15 +9,15 @@ var twoSum = function (nums, target) {
   let map = new Map();
 
   // Check if the hashmap contains (target - nums[i])
-  for(let i = 0; i < nums.length; i++) {
-    if(map.has(target - nums[i])) {
+  for (let i = 0; i < nums.length; i++) {
+    if (map.has(target - nums[i])) {
       console.log([map.get(target - nums[i]), i]);
-      return [map.get(target - nums[i]), i]
+      return [map.get(target - nums[i]), i];
     }
     // Else -> Inset into hashmap: key: nums[i], value: i
     map.set(nums[i], i);
   }
-}
+};
 
 // Method 2: 2 loops
 var twoSum2 = function (nums, target) {

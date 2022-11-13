@@ -9,14 +9,14 @@ var containsDuplicate = function (nums) {
 
   for (let i = 0; i < nums.length; i++) {
     if (!map.has(nums[i])) {
-        map.set(nums[i], nums[i]);
+      map.set(nums[i], nums[i]);
     } else {
-        console.log("True");
-        return true;
+      console.log('True');
+      return true;
     }
   }
   console.log(map);
-  console.log("False");
+  console.log('False');
   return false;
 };
 
@@ -29,11 +29,11 @@ var containsDuplicate2 = function (nums) {
   // Check duplicate
   for (let i = 0; i < sortedNums.length - 1; i++) {
     if (nums[i] == nums[i + 1]) {
-      console.log("True");
+      console.log('True');
       return true;
     }
   }
-  console.log("False");
+  console.log('False');
   return false;
 };
 

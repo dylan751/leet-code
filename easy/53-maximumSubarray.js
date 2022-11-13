@@ -16,5 +16,5 @@ var maxSubArray = function (nums) {
 };
 
 // Test cases
-let nums = [-2,1,-3,4,-1,2,1,-5,4]; // Expected output: 6
+let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]; // Expected output: 6
 maxSubArray(nums);

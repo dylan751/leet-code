@@ -32,4 +32,3 @@ const hasCycle = (head) => {
   }
   return false;
 };
-

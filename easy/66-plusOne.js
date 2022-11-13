@@ -13,8 +13,8 @@ var plusOne = function (digits) {
     res[digits.length - 1] = 0;
     remain = 1;
   } else {
-      console.log(res);
-      return res;
+    console.log(res);
+    return res;
   }
 
   for (let i = digits.length - 2; i >= 0; i--) {

@@ -5,9 +5,9 @@
  */
 var searchInsert = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
-    if(target == nums[i]) {
-        console.log(i);
-        return i;
+    if (target == nums[i]) {
+      console.log(i);
+      return i;
     }
     // If not found target in nums
     if (target < nums[i]) {

@@ -12,7 +12,6 @@ var isAnagram = function (s, t) {
   for (let char of s) {
     map.set(char, map.get(char) + 1 || 1);
   }
-  console.log(map);
 
   // Loop through t
   // If t's character has in map -> Remove it from the map

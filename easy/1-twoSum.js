@@ -3,6 +3,7 @@
  * @param {number} target
  * @return {number[]}
  */
+
 // Method 1: Using Hash Map
 // Loop once -> nums[i] -> Check if the hashmap contains target - nums[i]
 

@@ -2,6 +2,7 @@
  * @param {number} x
  * @return {boolean}
  */
+
 var isPalindrome = function (x) {
   let num_arr = [];
 

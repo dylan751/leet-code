@@ -2,6 +2,7 @@
  * @param {number} x
  * @return {number}
  */
+
 // Method 1
 var mySqrt = function (x) {
   if (x > 0 && x <= 3) {

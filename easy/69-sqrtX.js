@@ -9,6 +9,7 @@ var mySqrt = function (x) {
     console.log(1);
     return 1;
   }
+
   for (let i = 0; i <= Math.ceil(x / 2); i++) {
     if (i * i > x) {
       console.log(i - 1);

@@ -13,7 +13,6 @@ var findMin = function (nums) {
     if (nums[mid] < nums[right]) {
       right = mid;
     } else {
-      //             [3,3,1,3]
       if (nums[right] === nums[mid]) {
         right--;
       } else {

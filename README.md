@@ -5,6 +5,7 @@
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+
 ## Leetcode Challenges
 
 - Links: [Leetcode's problems](https://leetcode.com/problems)
@@ -16,6 +17,7 @@
 ---
 
 ## References
+
 - [Neetcode Website](https://neetcode.io/)
 - [Leetcode 75 important questions's docs](https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit#gid=0)
 
@@ -28,6 +30,8 @@
 - [How to deploy Node App on AWS2 EC2 Amazon Linux 2](https://www.youtube.com/watch?v=oHAQ3TzUTro)
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=muoi07052001&layout=compact&bg_color=222831&text_color=eeeeee&title_color=f8d49d&langs_count=8">>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

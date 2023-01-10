@@ -5,7 +5,6 @@
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
 ## Leetcode Challenges
 
 - Links: [Leetcode's problems](https://leetcode.com/problems)

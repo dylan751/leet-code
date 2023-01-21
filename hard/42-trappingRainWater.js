@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-var trap = function (height) {
+const trap = (height) => {
   let [l, r, lmax, rmax, max] = [0, height.length - 1, 0, 0, 0];
   while (l < r) {
     if (height[l] <= height[r]) {

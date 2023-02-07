@@ -3,12 +3,12 @@
  * @param {number} target
  * @return {number[][]}
  */
+
 var fourSum = function (nums, target) {
   let sum = 0,
     ret = [],
     done = {};
   nums = nums.sort((a, b) => a - b);
-
   for (let i = 0; i < nums.length - 2; i++)
     for (let j = i + 1; j < nums.length - 1; j++) {
       const newtarget = target - nums[i] - nums[j];

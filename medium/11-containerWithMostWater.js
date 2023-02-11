@@ -6,8 +6,8 @@
 // Calculate the size -> compare to maxSize and update maxSize
 // If left's value <= right's value -> Shift left, else shift right
 var maxArea = function (height) {
-  let left = 0,
-    right = height.length - 1;
+  let left = 0;
+  let right = height.length - 1;
   let maxArea = 0;
   let newMaxArea;
 

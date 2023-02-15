@@ -9,6 +9,7 @@ var myAtoi = function (s) {
     if ((isNaN(Number(s[i])) && i !== 0) || s[i] === ' ') break;
     s_num += s[i];
   }
+
   let num = Number(s_num);
 
   if (isNaN(num)) return 0;

@@ -5,17 +5,20 @@
  */
 
 var threeSumClosest = function (nums, target) {
-  let closestSum = 9999999;
+  let n = nums.length;
+  let result = nums[0] + nums[1] + nums[2];
   nums.sort((a, b) => a - b);
-  for (let i = 0; i < nums.length - 2; i++) {
-    for (let j = i + 1; j < nums.length - 1; j++) {
-      for (let k = j + 1; k < nums.length; k++) {
-        if (
-          Math.abs(closestSum) > Math.abs(nums[i] + nums[j] + nums[k] - target)
-        ) {
-          closestSum = nums[i] + nums[j] + nums[k] - target;
-        }
-      }
+  for (let i = 0; i < n - 2; i++) {
+    let j = i + 1,
+      k = n - 1;
+    while (j < k) {
+      let sum = nums[i] + nums[j] + nums[k];
+      const gap = sum - target;
+      if (gap === 0) return sum;
+      if (Math.abs(gap) < Math.abs(result - target)) result = sum;
+      if (gap > 0) k--;
+      else j++;
     }
   }
+  return result;
 };

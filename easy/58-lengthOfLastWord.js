@@ -11,4 +11,5 @@ var lengthOfLastWord = function (s) {
 
 // Test cases
 let s = '   fly me   to   the moon  '; // Expected output: 4
+// let s = 'a'; // Expected output: 1
 lengthOfLastWord(s);
